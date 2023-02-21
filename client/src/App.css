@@ -1,0 +1,41 @@
+:root{
+  --nav-width: 15%;
+}
+header{
+  background-color: #E1EEDD;
+  position: sticky;
+  top:0px;
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 2px solid #a8b1a5;
+}
+nav{
+  background-color: #E1EEDD;
+  width: var(--nav-width);
+  height: 100vh;
+  position:fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+nav a{
+  text-decoration: none;
+  background-color: #F0A04B;
+  width: 100%;
+  text-align: center;
+  color:white;
+  padding: 10px;
+  margin: 5px;
+}
+
+nav a.active{
+  background-color: #183A1D;
+}
+
+.container{
+  margin-left: var(--nav-width)
+}
