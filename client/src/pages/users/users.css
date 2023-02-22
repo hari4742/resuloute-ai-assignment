@@ -1,0 +1,29 @@
+.users{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 90vh;
+}
+
+.user{
+    background-color: #E1EEDD;
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 7px;
+    width: 250px ;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.users-container{
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+}

@@ -26,7 +26,7 @@ const Recognise = () => {
           headers: { "Content-Type": "multipart/form-data" },
         }
       );
-      console.log(response);
+      // console.log(response);
       if (response.data.message === "User Found") {
         setMessage({
           response: true,
@@ -43,7 +43,7 @@ const Recognise = () => {
         });
       }
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
     e.target.disabled = false;
   };

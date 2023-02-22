@@ -10,7 +10,7 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(fields);
+    // console.log(fields);
     e.target.disabled = true;
     if (fields.name === "" || fields.email === "" || fields.img === "") {
       alert("All fields are required.");
@@ -21,7 +21,7 @@ const Register = () => {
       headers: { "Content-Type": "multipart/form-data" },
     });
 
-    console.log(response);
+    // console.log(response);
     if (response.data.id) {
       alert("User registered Successfully");
       document.querySelector("#register-form").reset();
