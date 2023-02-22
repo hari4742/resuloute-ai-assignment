@@ -1,0 +1,32 @@
+.register{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 90vh;
+}
+
+.register form{
+    display: flex;
+    flex-direction: column;
+    background-color: #E1EEDD;
+    height: 80%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 7px;
+}
+
+.register form input{
+    outline: none;
+    width: 50%;
+    margin: 5px;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid #183A1D;
+    border-radius: 5px;
+}
+
+.register [type="text"],[type="email"]{
+    background: transparent;
+}

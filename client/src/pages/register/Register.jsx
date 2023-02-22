@@ -1,5 +1,6 @@
 import { useState } from "react";
 import backend from "../../backend";
+import "./register.css";
 const Register = () => {
   const [fields, setFields] = useState({
     name: "",
@@ -46,6 +47,7 @@ const Register = () => {
   return (
     <div className="register">
       <form id="register-form">
+        <h2>Register</h2>
         <input
           type="text"
           name="name"
