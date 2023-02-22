@@ -1,5 +1,5 @@
 import { useState } from "react";
-import backend from "../backend";
+import backend from "../../backend";
 const Register = () => {
   const [fields, setFields] = useState({
     name: "",

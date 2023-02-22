@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import backend from "../backend";
+import backend from "../../backend";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -11,6 +11,7 @@ const Users = () => {
   };
   useEffect(() => {
     fetchUsers();
+    //eslint-disable-next-line
   }, []);
   return (
     <div className="users">

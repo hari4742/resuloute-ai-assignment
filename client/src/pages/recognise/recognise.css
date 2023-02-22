@@ -1,0 +1,77 @@
+.recognise{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    flex-direction: column;
+    gap: 20px;
+}
+.recognise form{
+    display: flex;
+    flex-direction: column;
+    background-color: #E1EEDD;
+    height: 60%;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    gap:20px;
+}
+
+.recognise [type="submit"]{
+    background-color: #183A1D;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 2px 2px 4px #748776;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.recognise [type="submit"]:disabled{
+    background-color: #748776;
+    cursor: not-allowed;
+}
+
+.recognise [type="file"]{
+    cursor: pointer;
+    border: 1px solid black;
+    width: 60%;
+    border-radius: 7px;
+    padding: 2px;;
+
+}
+
+.recognise [type="file"]::-webkit-file-upload-button {
+    /* visibility: hidden; */
+    background-color: #F0A04B;
+    color:white;
+    border:2px solid hsl(31, 95%, 52%);
+    padding: 7px;
+    border-radius: 5px;
+}
+
+
+.file-container{
+    /* background-color: hsl(106, 35%, 80%); */
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.recognise .message{
+    background-color: #E1EEDD;
+    width: 50%;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px 0px;
+}
+
+.recognise .message h2{
+    font-size: 20px;
+    margin-bottom: 5px;
+}

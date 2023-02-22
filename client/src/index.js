@@ -9,9 +9,9 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import Recognise from "./pages/Recognise";
-import Register from "./pages/Register";
-import Users from "./pages/Users";
+import Recognise from "./pages/recognise/Recognise";
+import Register from "./pages/register/Register";
+import Users from "./pages/users/Users";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
