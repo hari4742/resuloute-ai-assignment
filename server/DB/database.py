@@ -13,7 +13,8 @@ SERVER = os.getenv("POSTGRES_SERVER")
 PORT = os.getenv("POSTGRES_PORT")
 DB_NAME = os.getenv("DB_NAME")
 
-DATABASE_URL = f"postgresql://{USER_NAME}:{PASSWORD}@{SERVER}:{PORT}/{DB_NAME}"
+# DATABASE_URL = f"postgresql://{USER_NAME}:{PASSWORD}@{SERVER}:{PORT}/{DB_NAME}"
+DATABASE_URL = "sqlite:///./sql_app.db"
 
 engine = create_engine(DATABASE_URL)
 

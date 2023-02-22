@@ -1,4 +1,5 @@
 from fastapi import FastAPI,Form,UploadFile,Depends,HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 import face_recognition as fr
 import numpy as np
 import pickle
@@ -10,6 +11,15 @@ from DB.database import get_db,engine
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
@@ -41,10 +51,9 @@ def recognize_user(img:UploadFile,db:Session=Depends(get_db)):
     unknown_image_encodings = np.array(fr.face_encodings(unknown_image))
 
     for user in crud.get_users(db):
-        print(user)
         known_image_encoding = pickle.loads(user.face_encoding)
         if fr.compare_faces(known_image_encoding,unknown_image_encodings)[0]:
-            return {"status":"OK","message":"User Found","data":{"id":user.id,"name":user.name,"email":user.email}}
+            return {"status":"OK","message":"User Found","user":{"id":user.id,"name":user.name,"email":user.email}}
         
     return {"status":"OK","message":"User Not Found. Please Consider register yourself."}
 
